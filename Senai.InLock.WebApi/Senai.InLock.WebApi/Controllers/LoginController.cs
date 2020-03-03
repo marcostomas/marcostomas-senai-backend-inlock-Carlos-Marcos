@@ -18,7 +18,7 @@ namespace Senai.InLock.WebApi.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private IUsuarioAdminRepository _usuarioRepository { get; set; }
+        private IUsuarioRepository _usuarioRepository { get; set; }
         public object JwtRegisteredClaimNames { get; private set; }
 
         public LoginController()
@@ -29,7 +29,7 @@ namespace Senai.InLock.WebApi.Controllers
         [HttpPost]
         public IActionResult Post(LoginViewModel login)
         {
-            UsuarioAdminDomain usuarioBuscado = _usuarioRepository.BuscarPorEmailSenha(login.Email, login.Senha);
+            UsuarioDomain usuarioBuscado = _usuarioRepository.BuscarPorEmailSenha(login.Email, login.Senha);
 
             if(usuarioBuscado == null)
             {
