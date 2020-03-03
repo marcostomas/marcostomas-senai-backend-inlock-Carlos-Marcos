@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Senai.InLock.WebApi.Repository
 {
-    public class UsuarioAdminRepository : IUsuarioRepository
+    public class UsuarioAdminRepository : IUsuarioAdminRepository
     {
         //private string stringConexao = "Data Source=DESKTOP-GCOFA7F\\SQLEXPRESS; initial catalog=Filmes_manha; user Id=sa; pwd=sa@132";
         private string stringConexao = "Data Source = LAPTOP-N251D43S\\TEW_SQLEXPRESS; initial catalog=M_Peoples;integrated security = true";
 
-        public UsuarioDomain BuscarPorEmailSenha(string email, string senha)
+        public UsuarioAdminDomain BuscarPorEmailSenha(string email, string senha)
         {
            using(SqlConnection con = new SqlConnection(stringConexao))
             {
@@ -30,7 +30,7 @@ namespace Senai.InLock.WebApi.Repository
 
                     if(rdr.HasRows)
                     {
-                        UsuarioDomain usuario = new UsuarioDomain();
+                        UsuarioAdminDomain usuario = new UsuarioAdminDomain();
 
                         while(rdr.Read())
                         {
@@ -49,7 +49,7 @@ namespace Senai.InLock.WebApi.Repository
         }
 
 
-        public void Cadastrar(UsuarioDomain usuario)
+        public void Cadastrar(UsuarioAdminDomain usuario)
         {
             using(SqlConnection con = new SqlConnection(stringConexao))
             {
@@ -67,9 +67,9 @@ namespace Senai.InLock.WebApi.Repository
             }
         }
 
-        public List<UsuarioDomain> Listar()
+        public List<UsuarioAdminDomain> Listar()
         {
-            List<UsuarioDomain> usuarios = new List<UsuarioDomain>();
+            List<UsuarioAdminDomain> usuarios = new List<UsuarioAdminDomain>();
 
             using(SqlConnection con = new SqlConnection(stringConexao))
             {
@@ -85,7 +85,7 @@ namespace Senai.InLock.WebApi.Repository
 
                     while(rdr.Read())
                     {
-                        UsuarioDomain usuario = new UsuarioDomain()
+                        UsuarioAdminDomain usuario = new UsuarioAdminDomain()
                         {
                             IdUsuario = Convert.ToInt32(rdr[0]),
                             Email = rdr["Email"].ToString(),
