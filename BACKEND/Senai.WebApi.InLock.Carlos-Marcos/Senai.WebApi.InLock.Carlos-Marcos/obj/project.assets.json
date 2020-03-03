@@ -12774,23 +12774,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\36349647823\\.nuget\\packages\\": {},
+    "C:\\Users\\44036901818\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\36349647823\\Desktop\\senai-backend-inlock-Carlos-Marcos\\BACKEND\\Senai.WebApi.InLock.Carlos-Marcos\\Senai.WebApi.InLock.Carlos-Marcos\\Senai.WebApi.InLock.Carlos-Marcos.csproj",
+      "projectUniqueName": "C:\\Users\\44036901818\\Desktop\\senai-backend-inlock-Carlos-Marcos\\BACKEND\\Senai.WebApi.InLock.Carlos-Marcos\\Senai.WebApi.InLock.Carlos-Marcos\\Senai.WebApi.InLock.Carlos-Marcos.csproj",
       "projectName": "Senai.WebApi.InLock.Carlos-Marcos",
-      "projectPath": "C:\\Users\\36349647823\\Desktop\\senai-backend-inlock-Carlos-Marcos\\BACKEND\\Senai.WebApi.InLock.Carlos-Marcos\\Senai.WebApi.InLock.Carlos-Marcos\\Senai.WebApi.InLock.Carlos-Marcos.csproj",
-      "packagesPath": "C:\\Users\\36349647823\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\36349647823\\Desktop\\senai-backend-inlock-Carlos-Marcos\\BACKEND\\Senai.WebApi.InLock.Carlos-Marcos\\Senai.WebApi.InLock.Carlos-Marcos\\obj\\",
+      "projectPath": "C:\\Users\\44036901818\\Desktop\\senai-backend-inlock-Carlos-Marcos\\BACKEND\\Senai.WebApi.InLock.Carlos-Marcos\\Senai.WebApi.InLock.Carlos-Marcos\\Senai.WebApi.InLock.Carlos-Marcos.csproj",
+      "packagesPath": "C:\\Users\\44036901818\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\44036901818\\Desktop\\senai-backend-inlock-Carlos-Marcos\\BACKEND\\Senai.WebApi.InLock.Carlos-Marcos\\Senai.WebApi.InLock.Carlos-Marcos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\36349647823\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\44036901818\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

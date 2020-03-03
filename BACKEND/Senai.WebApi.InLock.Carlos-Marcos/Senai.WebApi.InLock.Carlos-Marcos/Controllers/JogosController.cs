@@ -11,5 +11,6 @@ namespace Senai.WebApi.InLock.Carlos_Marcos.Controllers
     [ApiController]
     public class JogosController : ControllerBase
     {
+
     }
 }
