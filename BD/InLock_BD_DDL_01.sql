@@ -11,8 +11,8 @@ CREATE TABLE Jogos(
 IdJogo INT PRIMARY KEY IDENTITY,
 NomeJogo VARCHAR(255) NOT NULL,
 Descricao VARCHAR(255) NOT NULL,
-DataLancamento DATE NOT NULL,
-Valor DECIMAL (5,2) NOT NULL,
+DataLancamento VARCHAR(255) NOT NULL,
+Valor REAL NOT NULL,
 IdEstudio INT FOREIGN KEY REFERENCES Estudio (IdEstudio)
 );
 ​
@@ -22,8 +22,18 @@ Titulo VARCHAR(255) NOT NULL
 );
 ​
 CREATE TABLE Usuarios(
-IUsuario INT PRIMARY KEY IDENTITY,
+IdUsuario INT PRIMARY KEY IDENTITY,
 Email VARCHAR(255) NOT NULL,
 Senha VARCHAR(255) NOT NULL,
 IdTipoUsuario INT FOREIGN KEY REFERENCES TipoUsuarios (IdTipoUsuario)
 );
+
+DROP TABLE Usuarios;
+DROP TABLE TipoUsuarios;
+DROP TABLE Jogos;
+DROP TABLE Estudio;
+
+SELECT * FROM Usuarios;
+SELECT * FROM TipoUsuarios;
+SELECT * FROM Jogos;
+SELECT * FROM Estudio;

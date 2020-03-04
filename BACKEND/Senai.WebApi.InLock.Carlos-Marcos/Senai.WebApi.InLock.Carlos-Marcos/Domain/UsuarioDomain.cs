@@ -19,5 +19,7 @@ namespace Senai.WebApi.InLock.Carlos_Marcos.Domain
         public string Senha { get; set; }
 
         public int IdTipoUsuario { get; set; }
+
+        public TipoUsuarioDomain TipoUsuario { get; set; }
     }
 }

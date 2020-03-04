@@ -1,4 +1,5 @@
 ﻿using Senai.WebApi.InLock.Carlos_Marcos.Domain;
+using Senai.WebApi.InLock.Carlos_Marcos.Interface;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -7,9 +8,15 @@ using System.Threading.Tasks;
 
 namespace Senai.WebApi.InLock.Carlos_Marcos.Repository
 {
-    public class TipoRepository
+    public class TipoUsuarioRepository : ITipoUsuarioRepository
 {
-        private string stringConexao = "Data Source = LAPTOP-N251D43S\\TEW_SQLEXPRESS; initial catalog=M_Peoples;integrated security = true";
+        private string stringConexao = "Data Source = LAPTOP-N251D43S\\TEW_SQLEXPRESS; initial catalog=InLock_Games_Manha;integrated security = true;";
+
+        //public void Cadastrar(TipoUsuarioDomain novoTipoUsuario)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         //private string stringConexao = "Data Source=DESKTOP-GCOFA7F\\SQLEXPRESS; initial catalog=Filmes_manha; user Id=sa; pwd=sa@132";
 
         public List<TipoUsuarioDomain> Listar()
@@ -18,7 +25,7 @@ namespace Senai.WebApi.InLock.Carlos_Marcos.Repository
 
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelect = "SELECT * FROM";
+                string querySelect = "SELECT IdTipoUsuario, Titulo FROM TipoUsuarios";
 
                 con.Open();
 

@@ -13,5 +13,6 @@ namespace Senai.WebApi.InLock.Carlos_Marcos.Interface
         /// </summary>
         /// <returns></returns>
         List<TipoUsuarioDomain> Listar();
+        //void Cadastrar(TipoUsuarioDomain novoTipoUsuario);
     }
 }

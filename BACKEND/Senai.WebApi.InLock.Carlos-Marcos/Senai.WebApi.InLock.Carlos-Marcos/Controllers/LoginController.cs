@@ -18,11 +18,7 @@ namespace Senai.WebApi.InLock.Carlos_Marcos.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
- 
-
         private IUsuarioRepository _usuarioRepository { get; set; }
-
-
 
         public LoginController()
         {
@@ -46,13 +42,13 @@ namespace Senai.WebApi.InLock.Carlos_Marcos.Controllers
                 new Claim(ClaimTypes.Role, usuarioBuscado.IdTipoUsuario.ToString())
             };
 
-            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(""));
+            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("jogos-chave-autenticacao"));
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
-                issuer : "",
-                audience : "",
+                issuer : "Jogos.WebApi",
+                audience : "Jogos.WebApi",
                 claims : claims,
                 expires : DateTime.Now.AddMinutes(30),
                 signingCredentials : creds
@@ -63,11 +59,6 @@ namespace Senai.WebApi.InLock.Carlos_Marcos.Controllers
                 token = new JwtSecurityTokenHandler().WriteToken(token)
             });
         }
-        // GET: api/Login
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+     
     }
 }

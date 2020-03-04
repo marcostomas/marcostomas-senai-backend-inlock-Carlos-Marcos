@@ -6,12 +6,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.WebApi.InLock.Carlos_Marcos.Domain;
 using Senai.WebApi.InLock.Carlos_Marcos.Interface;
+using Senai.WebApi.InLock.Carlos_Marcos.Repository;
 
 namespace Senai.WebApi.InLock.Carlos_Marcos.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TipoUsuarioController : ControllerBase
+    public class TipoUsuariosController : ControllerBase
     {
         /// <summary>
         /// Cria um objeto _tipoUsuarioRepository que irá receber todos os métodos definidos na interface
@@ -21,7 +22,7 @@ namespace Senai.WebApi.InLock.Carlos_Marcos.Controllers
         /// <summary>
         /// Instancia este objeto para que haja a referência aos métodos no repositório
         /// </summary>
-        public TipoUsuarioController()
+        public TipoUsuariosController()
         {
             _tipoUsuarioRepository = new TipoUsuarioRepository();
         }
@@ -45,37 +46,16 @@ namespace Senai.WebApi.InLock.Carlos_Marcos.Controllers
         /// <param name="novoTipoUsuario">Objeto novoTipoUsuario que será cadastrado</param>
         /// <returns>Retorna os dados que foram enviados para cadastro e um status code 201 - Created</returns>
         /// dominio/api/TiposUsuario
-        [HttpPost]
-        public IActionResult Post(TipoUsuarioDomain novoTipoUsuario)
-        {
+        //[HttpPost]
+        //public IActionResult Post(TipoUsuarioDomain novoTipoUsuario)
+        //{
             // Faz a chamada para o método .Cadastrar();
-            _tipoUsuarioRepository.Cadastrar(novoTipoUsuario);
+         //   _tipoUsuarioRepository.Cadastrar(novoTipoUsuario);
 
             // Retorna o status code 201 - Created com a URI e o objeto cadastrado
-            return Created("http://localhost:5000/api/Funcionarios", novoTipoUsuario);
-        }
+        //    return Created("http://localhost:5000/api/Usuarios", novoTipoUsuario);
+        //}
 
-        /// <summary>
-        /// Busca um tipo de usuário através do seu ID
-        /// </summary>
-        /// <param name="id">ID do tipo de usuário que será buscado</param>
-        /// <returns>Retorna um tipo de usuário buscado ou NotFound caso nenhum seja encontrado</returns>
-        /// dominio/api/TiposUsuario/1
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
-        {
-            // Cria um objeto tipoUsuarioBuscado que irá receber o tipo de usuário buscado no banco de dados
-            TipoUsuarioDomain tipoUsuarioBuscado = _tipoUsuarioRepository.BuscarPorId(id);
-
-            // Verifica se algum tipo de usuário foi encontrado
-            if (tipoUsuarioBuscado != null)
-            {
-                // Caso seja, retorna os dados buscados e um status code 200 - Ok
-                return Ok(tipoUsuarioBuscado);
-            }
-
-            // Caso não seja, retorna um status code 404 - NotFound com a mensagem
-            return NotFound("Nenhum tipo de usuário encontrado para o identificador informado");
-        }
+       
     }
 }

@@ -15,7 +15,7 @@ namespace Senai.WebApi.InLock.Carlos_Marcos.Domain
 
         public string Descricao { get; set; }
 
-        public DateTime DataLancamento { get; set; }
+        public string DataLancamento { get; set; }
 
         public double Valor { get; set; }
 

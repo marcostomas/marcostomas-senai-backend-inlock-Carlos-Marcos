@@ -4,6 +4,23 @@
         <name>Senai.WebApi.InLock.Carlos-Marcos</name>
     </assembly>
     <members>
+        <member name="P:Senai.WebApi.InLock.Carlos_Marcos.Controllers.TipoUsuariosController._tipoUsuarioRepository">
+            <summary>
+            Cria um objeto _tipoUsuarioRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:Senai.WebApi.InLock.Carlos_Marcos.Controllers.TipoUsuariosController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:Senai.WebApi.InLock.Carlos_Marcos.Controllers.TipoUsuariosController.Get">
+            <summary>
+            Lista todos os tipos de usuário
+            </summary>
+            <returns>Retorna uma lista de tipos de usuário e um status code 200 - Ok</returns>
+            dominio/api/TiposUsuario
+        </member>
         <member name="M:Senai.WebApi.InLock.Carlos_Marcos.Interface.IEstudioRepository.Listar">
             <summary>
             Lista todos os Estudios

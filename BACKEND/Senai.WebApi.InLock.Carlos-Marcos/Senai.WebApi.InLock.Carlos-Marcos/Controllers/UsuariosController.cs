@@ -23,7 +23,7 @@ namespace senai.Peoples.WebApi.Controllers
     [ApiController]
 
     // Define que somente usuários logados possam acessar os endpoints
-    [Authorize]
+    
     public class UsuariosController : ControllerBase
     {
         /// <summary>
@@ -44,7 +44,7 @@ namespace senai.Peoples.WebApi.Controllers
         /// </summary>
         /// <returns>Retorna uma lista de usuários e um status code 200 - Ok</returns>
         /// dominio/api/Usuarios
-        [Authorize(Roles = "1")]    // Somente o tipo de usuário 1 (administrador) pode acessar o endpoint
+        //[Authorize(Roles = "1")]    // Somente o tipo de usuário 1 (administrador) pode acessar o endpoint
         [HttpGet]
         public IActionResult Get()
         {
@@ -67,7 +67,7 @@ namespace senai.Peoples.WebApi.Controllers
             _usuarioRepository.Cadastrar(novoUsuario);
 
             // Retorna o status code 201 - Created com a URI e o objeto cadastrado
-            return Created("http://localhost:5000/api/Funcionarios", novoUsuario);
+            return Created("http://localhost:5000/api/Usuarios", novoUsuario);
         }
 
     }
